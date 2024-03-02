@@ -1,4 +1,4 @@
-name: Maven CI/CD with SonarQube Analysis
+name: CI/CD workflow
 
 on:
   push:
