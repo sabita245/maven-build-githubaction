@@ -19,7 +19,7 @@ jobs:
           java-version: 14
           
       - name: Install checkstyle
-        run: apt-get install -y jq checkstyle
+        run:  sudo apt-get install -y jq checkstyle
         
       - name: code analysis using checkstyle
         run: mvn checkstyle:checkstyle
