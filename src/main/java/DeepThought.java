@@ -23,8 +23,11 @@ public class DeepThought {
     private void think(int time){
         try {
             TimeUnit.SECONDS.sleep(time);
-        } catch (Exception e){
-            System.out.println(e);
+        } catch (InterruptedException e){
+            // Re-interrupt the thread
+            Thread.currentThread().interrupt();
+            // Optionally handle the interruption or rethrow the exception
+            System.out.println("Thread interrupted while thinking: " + e.getMessage());
         }
     }
 
